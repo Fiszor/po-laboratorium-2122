@@ -1,0 +1,9 @@
+{% if brand_list %}
+    <ul>
+    {% for brand in brand_list %}
+        <li><a href="/app/{{ brand.id }}/">{{ brand.brand_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No brands are available.</p>
+{% endif %}

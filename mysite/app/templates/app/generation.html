@@ -1,0 +1,9 @@
+{% if generation_list %}
+    <ul>
+    {% for generation in generation_list %}
+        <li><a href="/app/{{ generation.id }}/">{{ generation.generation_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No generations are available.</p>
+{% endif %}
