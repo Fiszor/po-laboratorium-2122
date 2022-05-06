@@ -29,3 +29,5 @@ class Vehicle(models.Model):
     generation = models.ForeignKey(Generation, on_delete=models.CASCADE)
     def __str__(self):
         return '{} {} {}'.format(self.brand, self.model, self.generation)
+
+        
