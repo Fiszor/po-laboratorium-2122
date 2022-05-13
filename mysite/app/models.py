@@ -1,6 +1,7 @@
+from telnetlib import NOP
 from tkinter import CASCADE
 from django.db import models
-from django.forms import model_to_dict
+from django.forms import CharField, model_to_dict
 
 class Generation(models.Model):
     generation_name = models.CharField(max_length=200)

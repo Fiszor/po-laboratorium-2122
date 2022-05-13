@@ -7,7 +7,7 @@ from django.template import loader
 from django.shortcuts import render
 
 def index(request):
-    index_list = Generation.objects, Vehicle.objects, Brand.objects, Model.objects
+    index_list = 'Generation', 'Vehicle', 'Brand', 'Model'
     template = loader.get_template('app/index.html')
     context = {
         'index_list': index_list,
