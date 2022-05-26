@@ -1,10 +1,12 @@
 from gc import get_objects
 from multiprocessing import context
 from re import template
+from webbrowser import get
 from django.http import HttpResponse
 from .models import Generation, Model, Vehicle, Brand
 from django.template import loader
 from django.shortcuts import render
+from .forms import formBrand
 
 def index(request):
     index_list = 'Generation', 'Vehicle', 'Brand', 'Model'
@@ -45,3 +47,10 @@ def vehicle(request):
         'vehicle_list': vehicle_list
     }
     return HttpResponse(template.render(context, request))
+
+def formBrand(request):
+    form = formBrand()
+    context = {
+        'form': form
+    }
+    return render(request, 'app/formBrand.html', context)
